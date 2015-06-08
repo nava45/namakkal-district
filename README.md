@@ -8,7 +8,7 @@ This is django based web application which is developed for knowing the complete
  - Python
  - Jquery
  - Sqlite3
- - 
+  
 # Features:
  - Case In sensitive search
  - Complete aggregated results about your search item

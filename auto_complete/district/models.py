@@ -1,4 +1,5 @@
 from django.db import models
+from django.template.defaultfilters import slugify
 
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True, db_index=True)
@@ -16,6 +17,7 @@ class Location(models.Model):
 
 class Item(models.Model):
     name = models.CharField(max_length=300)
+    slug_name = models.SlugField(max_length=300)
     address = models.TextField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     contact_details = models.TextField(blank=True, null=True)
@@ -27,3 +29,7 @@ class Item(models.Model):
     def __unicode__(self):
         return "<%s-%s-%s>" %(self.name, self.category.name, \
                               self.location.place)
+
+    def save(self, *args, **kwargs):
+        self.slug_name = slugify(self.name)
+        super(Item, self).save(*args, **kwargs)

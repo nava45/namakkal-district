@@ -16,5 +16,5 @@ This is django based web application which is developed for knowing the complete
  - Contact details
  
 # Future work:
-Developing a mobile app for simplify the usage further to the user
-Updating the latest news alerts feature 
+ - Developing a mobile app for simplify the usage further to the user
+ - Updating the latest news alerts feature 

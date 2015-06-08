@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	{% block title %}
+	<title>Search Your District</title>
+	{% endblock %}
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-inverse">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Search</a></div>
+			
+		</nav>
+		{% block content %}
+			<p>fill me</p>
+		{% endblock %}
+	</div>
+</body>
+</html>

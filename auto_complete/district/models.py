@@ -17,7 +17,7 @@ class Location(models.Model):
 
 class Item(models.Model):
     name = models.CharField(max_length=300)
-    slug_name = models.SlugField(max_length=300)
+    slug_name = models.SlugField(max_length=300, blank=True)
     address = models.TextField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     contact_details = models.TextField(blank=True, null=True)

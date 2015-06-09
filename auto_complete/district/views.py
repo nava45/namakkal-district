@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import Http404, HttpResponse
 from django.template.defaultfilters import slugify
+from django.views.decorators.csrf import csrf_exempt
 
 from district.models import Item, Location, Category
 
@@ -9,6 +10,7 @@ import json
 def home(request):
     return render(request, "district/home.html", locals())
 
+@csrf_exempt
 def get_items(request):
     if request.is_ajax():
         print "ajax",request.POST
